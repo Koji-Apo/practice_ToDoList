@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDoリスト</title>
+        <style>
+            body{
+                background-color: cadetblue;
+                color: rgb(1, 54, 1);
+            }
+            .title{
+                text-align: center;
+                font-size: 35px;
+            }
+            .boardwrapper{
+                background-color: whitesmoke;
+                padding: 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                border: 1px solid black;
+                margin-bottom: 20px;
+            }
+            .formwrapper{
+                padding: 15px;
+                margin-left: 20px;
+            }
+            .writingArea{
+                margin-top: 10px;
+                width: 600px;
+                height: 80px;             
+                font-weight: 1000;
+            }
+            .TaskArea{
+                padding: 0px 10px;
+                font-weight: 700;
+            }
+            input{
+                padding: 6px;
+                border-radius: 10px;
+            }
+            button{
+                padding: 3px;
+                padding-right: 8px;
+                padding-left: 8px;
+                border-radius: 15px;
+                background-color: rgb(216, 252, 163);
+                font-weight: 1000;
+                border: 1px solid rgb(1, 83, 1);
+            }
+            li{
+                color: rgb(64, 123, 104);
+                font-size: medium;
+                padding-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="title">To Do List</h1>
+        <hr>
+    
+        <div class="boardwrapper">
+        <form class="formwrapper" name="todo">
+
+            <div>
+                <button type="button" id="add_task" onclick="add_task_function()">タスク追加</button>
+                <label><b>Time Limit :</b></label>
+                <input type="time" id="time_limit"></input>
+            </div>
+
+            <div>
+                <label><b>To Do : </b></label><br>
+                <textarea class="writingArea" type="text" id="task"></textarea>
+            </div>
+           
+        
+        
+            <div>
+                <div class="TaskArea">
+                    <p>タスク一覧</p><hr>
+                    <ul id="task_list"></ul>
+                </div>
+            </div>
+        </form>
+        </div>
+       
+    
+        <script src="ToDo-j.js"></script>
+    </body>
+</html>
